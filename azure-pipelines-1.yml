@@ -1,4 +1,12 @@
 # ASP.NET Core (.NET Framework)
+- task: VSTest@2
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
 - task: DeployVisualStudioTestAgent@1
   inputs:
     testMachineGroup: 'NBHANUPRIYA-LP'
