@@ -14,5 +14,12 @@ namespace TestPipeline
             IWebDriver driver = new ChromeDriver();
             driver.Navigate().GoToUrl("https://www.google.com");
         }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+            IWebDriver driver = new ChromeDriver();
+            driver.Navigate().GoToUrl("https://www.bing.com");
+        }
     }
 }
